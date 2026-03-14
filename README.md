@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coinnect
 
-## Getting Started
+A personal finance management app that lets you track accounts, budgets, cards, payments, and reusable payment templates — all in one place. Built as a full-stack Next.js app with a GraphQL API and MongoDB backend.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **API:** GraphQL via Apollo Server + Apollo Client
+- **Database:** MongoDB + Mongoose
+- **Auth:** JWT + bcrypt
+- **State:** Redux Toolkit
+- **UI:** Tailwind CSS v4, Radix UI, Recharts, GSAP
+- **Testing:** Jest, Cypress
+
+## Features
+
+- **Accounts** — manage multiple bank/financial accounts
+- **Budgets** — create and track spending budgets
+- **Cards** — manage debit/credit cards linked to accounts
+- **Payments** — log and view payment history
+- **Templates** — save reusable payment templates for recurring transfers
+
+## Running Locally
+
+1. **Install dependencies**
+
+```bash
+npm install
+```
+
+2. **Set up environment variables**
+
+```bash
+cp .env.example .env
+```
+
+Fill in the values (see `.env.example` for descriptions).
+
+3. **Run the dev server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Description |
+|---|---|
+| `CONNECTION_URL` | MongoDB connection string |
+| `JWT_SECRET` | Secret key used to sign JWTs |
+| `EMAIL_USER` | Email address used to send transactional emails |
+| `EMAIL_PASS` | Password/app password for the email account |
 
-## Learn More
+## Demo Credentials
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+Email:    demo@coinnect.app
+Password: demo1234
+```
