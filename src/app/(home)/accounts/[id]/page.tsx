@@ -20,6 +20,7 @@ const GET_ACCOUNTS_IDS = gql`
   query GetAccounts($userId: ID) {
     getAccounts(userId: $userId) {
       id
+      accountName
     }
   }
 `;
@@ -31,6 +32,7 @@ const GET_ACCOUNT = gql`
       type
       balance
       disabled
+      accountName
     }
   }
 `;
@@ -149,7 +151,7 @@ const Account = () => {
     <div className="flex-1 flex flex-col gap-6 max-md:px-3 px-6 max-md:py-6 py-8 min-w-0">
       <div className="flex flex-wrap justify-between gap-4">
         <div className="max-md:order-2 flex flex-col">
-          <h4>Account {id}</h4>
+          <h4>{accountData.getAccount.accountName}</h4>
           <span className="heading-desc">
             Manage your transactions effectively
           </span>
@@ -173,7 +175,7 @@ const Account = () => {
               options={
                 accountsData?.getAccounts?.map((item: Account) => ({
                   value: item.id,
-                  title: item.id,
+                  title: item.accountName,
                 })) ?? []
               }
               icon={<CreditCard size={16} color="var(--color-theme-d)" />}

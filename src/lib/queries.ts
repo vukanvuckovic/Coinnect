@@ -7,6 +7,7 @@ export const GET_ACCOUNTS = gql`
       disabled
       balance
       type
+      accountName
     }
   }
 `;

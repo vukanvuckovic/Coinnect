@@ -1,5 +1,7 @@
 # Coinnect
 
+**Live demo:** [https://coinnect-chi.vercel.app/](https://coinnect-chi.vercel.app/)
+
 A personal finance management app that lets you track accounts, budgets, cards, payments, and reusable payment templates — all in one place. Built as a full-stack Next.js app with a GraphQL API and MongoDB backend.
 
 ## Tech Stack

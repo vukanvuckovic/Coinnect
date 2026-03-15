@@ -10,7 +10,6 @@ import {
 import {
   capitalizeFirstLetter,
   formatAmount,
-  formatDate,
 } from "../../utils/utils";
 
 const TransactionInfo = ({
@@ -83,7 +82,15 @@ const TransactionInfo = ({
               <div className="transaction-info-section">
                 <h3 className="payment-small-heading">Date</h3>
                 <span className="heading-desc">
-                  {formatDate(new Date(Number(createdAt)))}
+                  {new Date(Number(createdAt)).toLocaleString("en-US", {
+                    weekday: "short",
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                    hour: "numeric",
+                    minute: "2-digit",
+                    hour12: true,
+                  })}
                 </span>
               </div>
               <div className="transaction-info-section">

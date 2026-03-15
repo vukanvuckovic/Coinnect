@@ -178,7 +178,7 @@ const Home = () => {
                               : "border-gray-200 text-gray-400 font-medium"
                           }`}
                         >
-                          {item.id}
+                          {item.accountName}
                         </button>
                       );
                     })}
@@ -201,7 +201,7 @@ const Home = () => {
                   <div className="flex flex-col gap-1">
                     <h4>Coinnect Bank</h4>
                     <h5 className="text-theme-gray-dark-2">
-                      {selectedAccount.id}
+                      {selectedAccount.accountName}
                     </h5>
                     <span className="md:text-lg font-semibold text-theme-d">
                       {formatAmount(selectedAccount.balance ?? 0)}

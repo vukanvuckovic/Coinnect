@@ -54,8 +54,8 @@ export function BalanceChart({
     : lastMonthDiff === 0
     ? "Your transaction activity is unchanged compared to last month."
     : lastMonthDiff < 0
-    ? `You've spent $${Math.abs(lastMonthDiff)} less than last month.`
-    : `You've spent $${lastMonthDiff} more than last month.`;
+    ? `You've spent $${Math.abs(lastMonthDiff).toFixed(2)} less than last month.`
+    : `You've spent $${lastMonthDiff.toFixed(2)} more than last month.`;
 
   return (
     <Card className="border-gray-100 shadow-none custom-shadow">
@@ -95,7 +95,14 @@ export function BalanceChart({
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent hideLabel />}
+              content={
+                <ChartTooltipContent
+                  hideLabel
+                  formatter={(value) =>
+                    `$${Number(value).toFixed(2)}`
+                  }
+                />
+              }
             />
             <Line
               dataKey="amount"

@@ -66,6 +66,7 @@ type Account = {
   disabled: boolean;
   balance: number;
   type: string;
+  accountName: string;
 };
 
 type Card = {

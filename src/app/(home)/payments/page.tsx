@@ -127,7 +127,7 @@ const Payments = () => {
       ?.filter((item: Account) => !item.disabled)
       .map((item: Account) => ({
         value: item.id,
-        title: `${item.id} - ${capitalizeFirstLetter(item.type)}`,
+        title: `${item.accountName} - ${capitalizeFirstLetter(item.type)}`,
       })) ?? [];
 
   return (
