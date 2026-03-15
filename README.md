@@ -2,6 +2,13 @@
 
 **Live demo:** [https://coinnect-chi.vercel.app/](https://coinnect-chi.vercel.app/)
 
+## Demo Credentials
+
+```
+Email:    demo@coinnect.app
+Password: demo1234
+```
+
 A personal finance management app that lets you track accounts, budgets, cards, payments, and reusable payment templates — all in one place. Built as a full-stack Next.js app with a GraphQL API and MongoDB backend.
 
 ## Tech Stack
@@ -55,10 +62,3 @@ Open [http://localhost:3000](http://localhost:3000).
 | `JWT_SECRET` | Secret key used to sign JWTs |
 | `EMAIL_USER` | Email address used to send transactional emails |
 | `EMAIL_PASS` | Password/app password for the email account |
-
-## Demo Credentials
-
-```
-Email:    demo@coinnect.app
-Password: demo1234
-```
